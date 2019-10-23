@@ -14,7 +14,7 @@ app.set ('view engine', 'hbs');
 //Serve files from public directory
 //__dirname is the absolute path of 
 // the application directory
-app.use(express.static(path.join(__dirname+ 'public')));
+app.use(express.static(path.join(__dirname, 'public')));
 finalImageDir = path.join(__dirname, 'views','images');
 
 // ---- THIS IS THE IMPT STEP ELSE THE PAGE FROM /image would not render ----
