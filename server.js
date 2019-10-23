@@ -6,21 +6,20 @@ const fs = require("fs");
 
 //Create an install of express application
 const app = express();
-const APP_PORT = process.env.PORT | 3000;
+const APP_PORT = process.env.PORT;
 
 app.engine('hbs',exprhb());
-app.set ('view engine', 'hbs');
+app.set('view engine', 'hbs');
 
 //Serve files from public directory
 //__dirname is the absolute path of 
 // the application directory
 app.use(express.static(path.join(__dirname, 'public')));
-finalImageDir = path.join(__dirname, 'views','images');
+finalImageDir = path.join(__dirname, 'views', 'images');
 
 // ---- THIS IS THE IMPT STEP ELSE THE PAGE FROM /image would not render ----
 app.use(express.static(finalImageDir));
 // ---- THIS IS THE IMPT STEP ELSE THE PAGE FROM /image would not render ----
-
 
 // img tag
 const randomImagesArr = [];
